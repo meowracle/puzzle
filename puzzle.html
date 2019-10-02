@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>puzzle</title>
+</head>
+<body>
+<input id="1" src="11.jpg" type="image" onclick="changePic(this)">
+<input id="2" src="20.jpg" type="image" onclick="changePic(this)">
+<input id="3" src="32.jpg" type="image" onclick="changePic(this)">
+<script>
+   function changePic(num){
+       let random=(Math.floor(Math.random()*10)+1)%3;
+       let pic= num.getAttribute("id");
+       let element=pic+random+".jpg";
+       num.src=element;
+       /*num.setAttribute("src", element);*/
+   }
+</script>
+</body>
+</html>
